@@ -705,6 +705,72 @@ footer {
     letter-spacing: 0.5px;
 }
 
+
+/* Education & Certifications */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.edu-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    /* Reduced gap */
+    padding: 15px 20px;
+    /* Reduced padding */
+    height: 100%;
+}
+
+.edu-icon {
+    width: 40px;
+    /* Reduced size */
+    height: 40px;
+    /* Reduced size */
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 10px;
+    /* Slightly smaller radius */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.edu-card:hover .edu-icon {
+    background: var(--accent);
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.edu-icon i {
+    width: 20px;
+    /* Reduced icon size */
+    height: 20px;
+    /* Reduced icon size */
+    color: var(--accent);
+    transition: all 0.3s ease;
+}
+
+.edu-card:hover .edu-icon i {
+    color: white;
+}
+
+.edu-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    min-width: unset;
+    line-height: 1.2;
+}
+
+.edu-meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
 /* Responsive */
 @media (max-width: 1000px) {
     .navbar {
